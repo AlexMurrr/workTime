@@ -1,0 +1,30 @@
+{
+  "name": "worktime",
+  "version": "1.0.0",
+  "description": "",
+  "main": "my.js",
+  "scripts": {
+    "c": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "lint": "eslint --fix .\\*.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexMurrr/programmingWords.git"
+  },
+  "keywords": [
+    "time",
+    "work"
+  ],
+  "author": "Alex Mur <lehamuraschov2014@yandex.ru>",
+  "bugs": {
+    "url": "https://github.com/AlexMurrr/programmingWords/issues"
+  },
+  "homepage": "https://github.com/AlexMurrr/programmingWords#readme",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.5.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3"
+  }
+}
