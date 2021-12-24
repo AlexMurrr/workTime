@@ -1,7 +1,7 @@
 {
   "name": "worktime",
   "version": "1.0.0",
-  "description": "",
+  "description": "show work time",
   "main": "my.js",
   "scripts": {
     "c": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlexMurrr/programmingWords.git"
+    "url": "git+https://github.com/AlexMurrr/workTime.git"
   },
   "keywords": [
     "time",
@@ -18,9 +18,9 @@
   ],
   "author": "Alex Mur <lehamuraschov2014@yandex.ru>",
   "bugs": {
-    "url": "https://github.com/AlexMurrr/programmingWords/issues"
+    "url": "https://github.com/AlexMurrr/workTime/issues"
   },
-  "homepage": "https://github.com/AlexMurrr/programmingWords#readme",
+  "homepage": "https://github.com/AlexMurrr/workTime#readme",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.5.0",
