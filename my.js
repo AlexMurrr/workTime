@@ -5,6 +5,8 @@ const countMsInDay = 24 * 60 * 60 * 1000;
 const inputDate = document.getElementById('date');
 const res = document.getElementById('res');
 const elem = document.getElementById('elem');
+const dayOfScheduleH2 = document.getElementById('dayOfSchedule');
+const garbageH2 = document.getElementById('garbage');
 
 elem.onclick = function dayWork() {
   const dayOfWork = Math.floor(
@@ -13,7 +15,7 @@ elem.onclick = function dayWork() {
   ) % 3;
   if (dayOfWork === 0) {
     res.textContent = 'В этот день вы должны быть на работе';
-  } else if (dayOfWork === 1) {
+  } if (dayOfWork === 1) {
     res.textContent = 'Этот день - отсыпной';
   } else if (dayOfWork === 2) {
     res.textContent = 'Этот день - выходной';
@@ -25,9 +27,6 @@ const daysWeek = ['Воскресенье', 'Понедельник', 'Втор�
 
 const nowDay = document.getElementById('now day');
 const nowDate = document.getElementById('now date');
-
-// const nowDate2 = document.getElementById('now date2');
-const dayOfScheduleH2 = document.getElementById('dayOfSchedule');
 
 const dateNow = new Date();
 
@@ -45,4 +44,12 @@ if (dayOfSchedule === 0) {
   dayOfScheduleH2.textContent = 'Сегодня отсыпной, завтра выходной';
 } else if (dayOfSchedule === 2) {
   dayOfScheduleH2.textContent = 'Выходной, а завтра на работу';
+}
+
+const workTimeOnShift = dateNow.getTime() - countMsInDay / 3; // get name work shift from 00:00
+const dateWorkTime = new Date(workTimeOnShift);
+const dayOfWork = dateWorkTime.getDay();
+
+if ((dayOfSchedule === 0 && daysWeek[dayOfWork] === 'Суббота') || (dayOfSchedule === 0 && daysWeek[dayOfWork] === 'Понедельник') || (dayOfSchedule === 0 && daysWeek[dayOfWork] === 'Четверг')) {
+  garbageH2.textContent = 'С утра вывезти мусор';
 }
